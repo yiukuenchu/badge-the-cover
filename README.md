@@ -10,3 +10,8 @@ Literally it is a generator that hepls you make your minimalist cover in badge.
 - Inspired by [Logoly](https://logoly.pro/).
 - Made with love.
 - **Deployed at Heroku.**
+
+# License
+Created by @yiukuenchuDo.  
+
+Under WTFPL License
