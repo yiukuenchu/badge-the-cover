@@ -14,29 +14,14 @@ export default new Router({
         analytics: {
           pageviewTemplate(route) {
             return {
-              title: 'Pornhub Generator',
+              title: 'badge-the-cover',
               page: route.path,
             }
           },
         },
       },
     },
-    {
-      path: '/vertical-ph',
-      name: 'vertical-pornhub',
-      component: () =>
-        import(/* webpackChunkName: "vertical-pornhub" */ './generator/VerticalPornHub.vue'),
-      meta: {
-        analytics: {
-          pageviewTemplate(route) {
-            return {
-              title: 'VerticalPornHub Generator',
-              page: route.path,
-            }
-          },
-        },
-      },
-    },
+    
     {
       path: '/about',
       name: 'about',

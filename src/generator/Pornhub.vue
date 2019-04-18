@@ -1,28 +1,47 @@
 <style lang="stylus" scoped>
+@import url('https://fonts.googleapis.com/css?family=Roboto:500');
+
 .pornhub
   display flex
   flex-direction  column
   align-items center
 .box
-    border 1px solid #333
-    border-radius 10px
-    padding 40px
-    margin 40px 10px
+    display flex
+    align-items center
+    justify-content center
+    width 400px
+    height 400px
+    background-color #F4F4F0
+    border 0px 
+    border-radius 0px
     max-width 100%
     .editarea
-        padding 20px
+        display flex
+        align-items center
+        justify-content center
         text-align center
-        font-size 60px
-        font-weight 700
+        font-size 4px
         .prefix
+            //font-family 'Roboto'
+            //font-weight lighter 
+            letter-spacing 2px
+            background-color #96B2B3
             color #fff
-            padding 5px 5px
-
+            padding-top 10px
+            padding-bottom 10px
+            padding-left 25px
+            padding-right 25px
         .postfix
-            color #000
-            background-color #f90
-            padding 5px 10px
-            border-radius 7px
+            //font-family 'Montserrat-ExtraBold'
+            font-weight bold
+            letter-spacing 2px
+            background-color #457FBC
+            color #fff
+            padding-top 10px
+            padding-bottom 10px
+            padding-left 25px
+            padding-right 25px
+            border-radius 0px
 
 // customize things
 .customize
@@ -47,19 +66,22 @@
       text-align center
       cursor pointer
   .download
-      color black
-      background #f90
+      color #fff
+      background #D9581D
+      border-radius 10px
   .share
     color #fff
     background #1da1f2
+    border-radius 10px
 </style>
 
 <template>
   <div class="pornhub">
     <div
       class="box"
+      id="cover"
       v-tooltip="{
-        content: 'Edit the text to create your own logo',
+        content: '试着修改下面的字体部分',
         show: true,
         classes: 'tooltipClasses',
       }"
@@ -70,7 +92,7 @@
         :style="{ 'font-size': fontSize + 'px', 'background-color': transparentBgColor }"
       >
         <template v-if="!reverseHighlight">
-          <span class="prefix" :style="{ color: prefixColor }" contenteditable spellcheck="false">{{
+          <span class="prefix" :style="{ color: prefixColor, 'background-color': prefixBgColor}" contenteditable spellcheck="false">{{
             prefixText
           }}</span>
           <span
@@ -100,32 +122,33 @@
       <div
         class="customize-color"
         id="prefixColor"
-        v-tooltip="{ content: 'Pick a color you like', show: true, classes: 'tooltipClasses' }"
+        v-tooltip="{ content: '你可以在这改变样式', show: true, classes: 'tooltipClasses' }"
       >
-        <div>Prefix Text Color: &nbsp; <input type="color" v-model="prefixColor" /></div>
-        <div>Suffix Text Color: &nbsp; <input type="color" v-model="suffixColor" /></div>
-        <div>Suffix Background Color: &nbsp; <input type="color" v-model="postfixBgColor" /></div>
-        <div>
+        <div>前 Font 颜色: &nbsp; <input type="color" v-model="prefixColor" /></div>
+        <div>后 Font 颜色: &nbsp; <input type="color" v-model="suffixColor" /></div>
+        <div>前 Badge 颜色: &nbsp; <input type="color" v-model="prefixBgColor" /></div>
+        <div>后 Badge 颜色: &nbsp; <input type="color" v-model="postfixBgColor" /></div>
+        <!-- <div>
           Transparent Background: &nbsp;
           <input type="checkbox" value="transparentBg" v-model="transparentBg" />
-        </div>
+        </div> -->
       </div>
 
-      <div class="customize-misc">
+      <!-- <div class="customize-misc">
         <div>
           Font Size: <input type="range" min="30" max="200" v-model="fontSize" /> {{ fontSize }}px
         </div>
         <div>Reverse Highlight: <input type="checkbox" v-model="reverseHighlight" /></div>
-      </div>
+      </div> -->
     </div>
 
     <div class="download-share">
       <div
         class="download"
-        v-tooltip="{ content: 'Export your own logo', show: true, classes: 'tooltipClasses' }"
+        v-tooltip="{ content: 'Click here to export!', show: true, classes: 'tooltipClasses' }"
         @click="download"
       >
-        Export
+        Download
       </div>
 
       <div class="share" @click="twitter"><i class="iconfont icon-twitter"></i> Tweet</div>
@@ -142,13 +165,14 @@ export default {
   data() {
     return {
       prefixColor: '#ffffff',
-      suffixColor: '#000000',
-      postfixBgColor: '#ff9900',
-      fontSize: '60',
+      suffixColor: '#ffffff',
+      prefixBgColor: '#96B2B3',
+      postfixBgColor: '#457FBC',
+      fontSize: '10',
       transparentBg: false,
       reverseHighlight: false,
-      prefixText: 'Edit',
-      suffixText: 'Me',
+      prefixText: 'Made with',
+      suffixText: 'LOVE',
     }
   },
   mounted: function() {
@@ -156,27 +180,27 @@ export default {
   },
   methods: {
     download() {
-      var node = document.getElementById('logo')
+      var node = document.getElementById('cover')
 
       domtoimage.toPng(node).then(function(blob) {
-        FileSaver.saveAs(blob, 'logo.png')
+        FileSaver.saveAs(blob, 'WeBadge.png')
       })
     },
     twitter() {
       this.$ga.event('social', 'action', 'twitter', 1)
       let url = 'https://logoly.pro'
-      let text = encodeURIComponent(`Built with #LogolyPro, by @xiqingongzi ${url}`)
+      let text = encodeURIComponent(`Built with #WeBadge, by @yiukuenchu ${url}`)
       window.open(`https://twitter.com/intent/tweet?text=${text}`)
     },
   },
-  computed: {
-    transparentBgColor() {
-      if (this.transparentBg) {
-        return 'transparent'
-      } else {
-        return '#000000'
-      }
-    },
-  },
+  // computed: {
+  //   transparentBgColor() {
+  //     if (this.transparentBg) {
+  //       return 'transparent'
+  //     } else {
+  //       return '#000000'
+  //     }
+  //   },
+  // },
 }
 </script>

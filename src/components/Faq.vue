@@ -1,6 +1,6 @@
 <style lang="stylus" scoped>
 li 
-    color #fff
+    color #118BEA
 </style>
 
 <template>
@@ -9,18 +9,17 @@ li
         <p>
             <ol>
                 <li>
-                    <p>Q: How to use this generator?</p>
-                    <p>A: The generator is very simple to use. You can get a logo in just 4 steps:</p>
+                    <p>Q: 怎么使用？</p>
+                    <p>A: 非常简单！只需 4 步：</p>
                         <ul>
-                            <li>Choose a style (e.g. Horizontal/Vertical, Pornhub/Youtube/...).</li>
-                            <li>Edit the text in the center box.</li>
-                            <li>Customize your logo (color, background, font size, etc.).</li>
-                            <li>Finally, click the "Export" button and get the logo of your own.</li>
+                            <li>编辑 Badge 内的文字</li>
+                            <li>改变 Badge 和文字的颜色，改成你喜欢的样式</li>
+                            <li>最后，点击 Download 按钮即可下载到本地</li>
                         </ul>
                 </li>
                 <li>
-                    <p>Q: Can I use the generated logo for personal or commercial purposes? </p>
-                    <p>A: The generated logo fully belongs to you. You can use it freely for any purposes. Though credit is always appreciated.</p>
+                    <p>Q: 生成的图片属于个人用途还是商业用途？ </p>
+                    <p>A: 随你喜欢，这都取决于你！ </p>
                 </li>
             </ol>
         </p>

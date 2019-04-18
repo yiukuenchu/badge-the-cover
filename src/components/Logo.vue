@@ -1,21 +1,22 @@
 <style lang="stylus" scoped>
 .logo
     padding 50px 0px 20px
-.prefix
+.prefix 
     color #fff
-    padding 5px
+    background-color #96B2B3
+    padding 15px 20px
 .postfix
-    color #000
-    background-color #f90
-    padding 5px
-    border-radius 7px
+    color #fff
+    background-color #457FBC
+    padding 15px 20px
+    margin-left 0px
 </style>
 
 <template>
   <div class="logo">
     <h1>
-      <span class="prefix">Logoly</span>
-      <span class="postfix">Pro</span>
+      <span class="prefix">Powered by</span>
+      <span class="postfix">badge-the-cover</span>
     </h1>
   </div>
 </template>

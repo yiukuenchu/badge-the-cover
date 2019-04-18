@@ -1,32 +1,35 @@
 <style lang="stylus" scoped>
 p 
-    color #fff
+    color #118BEA
 .prefix 
-    color #fff
-    padding 5px 0px
+    color #457FBC
+    background-color #96B2B3
+    padding 15px 20px
 .postfix
-    color #000
-    background-color #f90
-    padding 5px 5px
-    margin-left 5px
-    border-radius 7px
+    color #457FBC
+    background-color #457FBC
+    padding 15px 20px
+    margin-left 0px
 </style>
 
 <template>
     <div class="slogan">
         <h3>
-            <span class="prefix">Logoly</span>
-            <span class="postfix">Pro</span>
+            你可以做什么
         </h3>
         <p>
-            Logoly.pro is a creative logo generator, you can generate logo similar to Pornhub, YouTube, and more.
+            >「badge-the-cover」 能让你用 Badge 的样式制作自己的微信朋友圈封面
             <br><br>
-            <strong style="color:#f90">
-            If you think this project is fun, please 
-            <a href="https://github.com/bestony/logoly">
+            <br><br>
+        </p>
+        <h3>
+            Contribute
+        </h3>
+        <p>
+            > 如果你觉得有趣，
+            <a href="https://github.com/yiukuenchu/badge-the-cover">
             <img src="https://img.shields.io/badge/give%20me-a%20star-green.svg" />
             </a>
-            </strong>
         </p>
     </div>
 </template>

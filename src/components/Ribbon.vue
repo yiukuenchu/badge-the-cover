@@ -6,7 +6,7 @@ a
 </style>
 
 <template>
-    <a href="https://github.com/bestony/logoly" target="_blank">
+    <a href="https://github.com/yiukuenchu/badge-the-cover" target="_blank">
     <img
         width="149"
         height="149"

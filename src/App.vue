@@ -9,20 +9,21 @@
     </div>
     <div id="nav">
       <div class="menu">
-        <router-link to="/about">About</router-link>
+        <router-link to="/about">ABOUT</router-link>
         <router-link to="/" class="pb">
-          <span class="prefix">Porn</span>
-          <span class="postfix">hub</span>
+          <span class="prefix">GET STARTED</span>
+          <!-- <span class="postfix">STARTED</span> -->
         </router-link>
-        <router-link to="/vertical-ph" class="vph">
+        <!-- <router-link to="/vertical-ph" class="vph">
           <p class="prefix">Porn</p>
           <p class="postfix">hub</p>
-        </router-link>
-        <span class="disable">
+        </router-link> -->
+        
+        <!-- <span class="disable">
           <span class="prefix">You</span>
           <span class="postfix">Tube</span>
         </span>
-        <span class="disable">More coming soon...</span>
+        <span class="disable">More coming soon...</span> -->
       </div>
     </div>
     <router-view class="container"/>
@@ -60,12 +61,12 @@ body,
 #app {
   height: 100%;
   margin: 0;
-  background-color: #000;
-  color: #f90;
+  background-color: #C0C3C4;
+  color: #457FBC;
   font-family: Arial,Helvetica,sans-serif;
 }
 a {
-  color: #f90;
+  color: #368C48;
   text-decoration: none;
 }
 .logo,
@@ -89,14 +90,14 @@ a {
   font-weight: 700;
 }
 .pb .prefix {
-  color: #fff;
+  color: #368C48;
   padding: 2px;
 }
 .pb .postfix {
-  color: #000;
-  background-color: #f90;
+  color: #fff;
+  background-color: #151516;
   padding: 2px;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 .yb .prefix{
   color: #fff;
