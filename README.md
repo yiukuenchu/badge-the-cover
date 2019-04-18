@@ -12,6 +12,6 @@ Literally it is a generator that hepls you make your minimalist cover in badge.
 - **Deployed at Heroku.**
 
 # License
-Created by @yiukuenchuDo.  
+Created by @yiukuenchu.  
 
-Under WTFPL License
+Under WTFPL License.
