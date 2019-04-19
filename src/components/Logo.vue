@@ -15,8 +15,8 @@
 <template>
   <div class="logo">
     <h1>
-      <span class="prefix">Powered by</span>
-      <span class="postfix">badge-the-cover</span>
+      <span class="prefix">BADGE</span>
+      <span class="postfix">COVER</span>
     </h1>
   </div>
 </template>
