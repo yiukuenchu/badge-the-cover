@@ -14,4 +14,4 @@ Literally it is a generator that helps you make your minimalist cover in badge.
 # License
 Created by @yiukuenchu.  
 
-Under WTFPL License.
+Released under WTFPL License.
