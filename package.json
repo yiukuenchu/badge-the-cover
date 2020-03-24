@@ -10,13 +10,22 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "acorn": "^5.7.4",
     "dom-to-image": "^2.6.0",
+    "eslint-utils": "^1.4.1",
     "express": "^4.16.4",
     "file-saver": "^2.0.1",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.12",
+    "lodash.defaultsdeep": "^4.6.1",
+    "lodash.merge": "^4.6.2",
+    "minimist": "^1.2.2",
+    "serialize-javascript": "^2.1.1",
     "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.6.6",
     "vue-analytics": "^5.16.4",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
