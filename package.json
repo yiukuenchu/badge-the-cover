@@ -13,7 +13,7 @@
     "acorn": "^5.7.4",
     "dom-to-image": "^2.6.0",
     "eslint-utils": "^1.4.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "file-saver": "^2.0.1",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.12",
